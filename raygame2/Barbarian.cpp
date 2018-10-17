@@ -14,5 +14,3 @@ void Barbarian::draw()
 {
 	DrawTextureEx(BarbarianIdle, pos, 0, 1, RED);
 }
-int Barbarian::Dmg(int rage) {
-}

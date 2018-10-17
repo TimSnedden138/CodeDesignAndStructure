@@ -7,8 +7,6 @@ Wizard::Wizard()
 
 void Wizard::draw()
 {
-	if (health > 0) {
-		DrawTextureEx(WizardIdle , pos, 0, 1, BLUE);
-	}
+	DrawTextureEx(WizardIdle, {25,25},0,1, RED);
 
 }

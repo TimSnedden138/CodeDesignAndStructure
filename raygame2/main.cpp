@@ -20,6 +20,7 @@ int main()
 	int screenHeight = 450;
 	InitWindow(screenWidth, screenHeight, "Barbarian vs Wizard");
 	Barbarian Ra;
+	Wizard Te;
 	Ra.pos = { 200,200 };
 	SetTargetFPS(10);
 	float frameTime = 0.0f;
@@ -38,6 +39,7 @@ int main()
 
 		ClearBackground(BLACK);
 		Ra.draw();
+		Te.draw();
 
 		EndDrawing();
 		//----------------------------------------------------------------------------------

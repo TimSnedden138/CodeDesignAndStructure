@@ -9,7 +9,7 @@ public:
 	int mana = 50;
 	int gold;
 	Vector2 pos;
-	Wizard();
+	Wizard(); 
 	void draw();
 
 };

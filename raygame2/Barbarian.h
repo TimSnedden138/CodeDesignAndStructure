@@ -15,6 +15,5 @@ public:
 	bool loaded;
 	Barbarian();
 	void draw();
-	int Dmg(int rage);
 	void update(float frameTime);
 };
