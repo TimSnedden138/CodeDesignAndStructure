@@ -4,12 +4,12 @@
 class Wizard
 {
 public:
-	Texture2D WizardIdle = LoadTexture("Resources/WizardIdle0.png");
+	Texture2D WizardIdle;
 	int health = 25;
 	int mana = 50;
 	int gold;
 	Vector2 pos;
-	Wizard(); 
+	Wizard();
 	void draw();
 
 };

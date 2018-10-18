@@ -1,8 +1,9 @@
 #include "Wizard.h"
-#include "Barbarian.h"
+#include"raylib.h"
 #include<iostream>
 Wizard::Wizard()
 {
+	WizardIdle = LoadTexture("Resources/WizardIdle0.png");
 }
 
 void Wizard::draw()
