@@ -13,12 +13,19 @@ int main() {
 	std::cout << "Value 2:";
 	std::cin >> val2;
 	std::cin >> Result;
-	switch(Result)
-	
-	std::cout << "Min in whole Number:" << a << std::endl;
-	std::cout << "Max in whole Number:" << b << std::endl;
-	std::cout << "Min in decimal:" << c << std::endl;
-	std::cout << "Max in decimal:" << d << std::endl;
+	switch (Result)
+	case'a':
+
+	case'b':
+
+	case'c':
+
+	case'd':
+
+	case'e':
+
+	default:
+		break;
 	system("pause");
 	return 0;
 }
