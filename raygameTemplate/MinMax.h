@@ -16,3 +16,14 @@ t max(t a, t b)
 	return b;
 	}
 return a;}
+template<typename T>
+T add(T a, T b){
+	c = a + b;
+	return c;
+}
+template<typename t>
+t sub(t a, t b)
+{
+	c = a - b;
+	return c;
+}

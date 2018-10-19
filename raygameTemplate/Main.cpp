@@ -1,18 +1,24 @@
 #include"MinMax.h"
 #include<iostream>
-#include"gameObject.h"
-#include"Soldier.h"
 #include"raylib.h"
 #include<string>
 int main() {
-	int a = min<int>(15, 15);
-	int b = max<int>(4, 27);
-	float c = min<float>(24.2, 7.5);
-	float d = max<float>(7.3,35.4);
-	std::cout << "Min:" << a << std::endl;
-	std::cout << "Max:" << b << std::endl;
-	std::cout << "Min:" << c << std::endl;
-	std::cout << "Max:" << d << std::endl;
+	int Result = 0;
+	int val1 = 0;
+	int val2 = 0;
+	float val3 = 0.0f;
+	float val4 = 0.0f;
+	std::cout << "Value 1:";
+	std::cin >> val1;
+	std::cout << "Value 2:";
+	std::cin >> val2;
+	std::cin >> Result;
+	switch(Result)
+	
+	std::cout << "Min in whole Number:" << a << std::endl;
+	std::cout << "Max in whole Number:" << b << std::endl;
+	std::cout << "Min in decimal:" << c << std::endl;
+	std::cout << "Max in decimal:" << d << std::endl;
 	system("pause");
 	return 0;
 }

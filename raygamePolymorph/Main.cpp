@@ -31,6 +31,7 @@ int main()
 		// Draw
 		//----------------------------------------------------------------------------------
 		BeginDrawing();
+		BeginDrawing();
 
 		ClearBackground(BLACK);
 		PlayerIdle.draw();
