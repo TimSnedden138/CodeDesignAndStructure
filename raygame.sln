@@ -9,6 +9,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RaylibWizardVsBarbarian", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "raylibInheritance", "raylibInheritance\raylibInheritance.vcxproj", "{F020FED3-7DFE-4C3A-9343-674F775DFF82}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "raygamePolymorph", "raygamePolymorph\raygamePolymorph.vcxproj", "{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "raygameTemplate", "raygameTemplate\raygameTemplate.vcxproj", "{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +45,22 @@ Global
 		{F020FED3-7DFE-4C3A-9343-674F775DFF82}.Release|x64.Build.0 = Release|x64
 		{F020FED3-7DFE-4C3A-9343-674F775DFF82}.Release|x86.ActiveCfg = Release|Win32
 		{F020FED3-7DFE-4C3A-9343-674F775DFF82}.Release|x86.Build.0 = Release|Win32
+		{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}.Debug|x64.ActiveCfg = Debug|x64
+		{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}.Debug|x64.Build.0 = Debug|x64
+		{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}.Debug|x86.ActiveCfg = Debug|Win32
+		{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}.Debug|x86.Build.0 = Debug|Win32
+		{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}.Release|x64.ActiveCfg = Release|x64
+		{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}.Release|x64.Build.0 = Release|x64
+		{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}.Release|x86.ActiveCfg = Release|Win32
+		{78CAD1F9-BB5B-45BF-A033-6BAB7C87FD1B}.Release|x86.Build.0 = Release|Win32
+		{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}.Debug|x64.ActiveCfg = Debug|x64
+		{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}.Debug|x64.Build.0 = Debug|x64
+		{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}.Debug|x86.ActiveCfg = Debug|Win32
+		{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}.Debug|x86.Build.0 = Debug|Win32
+		{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}.Release|x64.ActiveCfg = Release|x64
+		{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}.Release|x64.Build.0 = Release|x64
+		{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}.Release|x86.ActiveCfg = Release|Win32
+		{FEB11E05-6948-4B2B-A247-E568E8BBFDFA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
