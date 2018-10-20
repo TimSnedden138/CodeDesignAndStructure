@@ -1,21 +1,10 @@
 #include "Soldier.h"
-
-
-Soldier::Soldier()
+void Soldier::render(Texture2D image)
 {
-
-}
-Soldier::~Soldier()
-{
-
+DrawTextureEx(image, { 100,100 }, 0, 2, WHITE);
 }
 
-void Soldier::update()
+void Soldier::update(float delta)
 {
-
 }
-
-void Soldier::render()
-{
-
-}
+ 

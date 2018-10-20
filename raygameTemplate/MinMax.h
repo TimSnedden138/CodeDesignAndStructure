@@ -27,3 +27,15 @@ t sub(t a, t b)
 	c = a - b;
 	return c;
 }
+template<typename t>
+t multiply(t a, t b)
+{
+	c = a * b;
+	return c;
+}
+template<typename T>
+T divide(T a, T b)
+{
+	c = a / b;
+	return c;
+}

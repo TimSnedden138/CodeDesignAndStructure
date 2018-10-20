@@ -1,30 +1,24 @@
 #pragma once
-#include <iostream>
 #include "raylib.h"
 template <typename T>
 class gameObject
 {
+public:
 	bool enabled;
 	T * object;
-
-	void update(float delta)
+	int timer;
+	Texture2D image;
+	
+void update(float delta)
 {
-	if (T.enabled = true) {
-
-	}
-	else if (T.enabled = false) {
-		std::cout << "the object is not being rendered"<<std::endl;
-	}
+	timer = delta;  
 }
 
-	void render()
-	{
-		if (T.enabled = true) {
-
-		}
-		else if (T.enabled = false) {
-			std::cout<<"the object is not being rendered"<<std::endl;
-		}
-	}
-
+void render(Texture2D image,T & object)
+{
+	object.render(image);
+}
+gameObject(T& _obj) {
+	object = &_obj;
+}
 };

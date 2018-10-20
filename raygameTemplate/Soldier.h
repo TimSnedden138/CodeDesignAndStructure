@@ -1,11 +1,9 @@
 #pragma once
 #include <iostream>
 #include "raylib.h"
-#include"gameObject.h"
-class Soldier{
+class Soldier {
+public:
 	bool enabled;
-	Soldier();
-	~Soldier();
-	void update();
-	void render();
+	void update(float delta);
+	void render(Texture2D image);
 };
