@@ -2,7 +2,7 @@
 
 void DialFace::DrawFace()
 {
-	DrawCircleLines(400, 250, 70, RED);
+	DrawCircleLines(400, 250, 70, RED );
 }
 
 void DialFace::Tick()
