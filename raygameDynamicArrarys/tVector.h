@@ -23,7 +23,7 @@ public:
 	T &at(size_t index);                // returns the element at the given element
 	tVector(const tVector &vec);
 
-	tVector& operator=(const tVector &vec);
+	//tVector& operator=(const tVector &vec);
 	size_t size() const;                // returns current number of elements
 	size_t capacity() const;            // returns maximum number of elements we can store
 };
@@ -51,27 +51,30 @@ inline T * tVector<T>::data()
 template<typename T>
 inline void tVector<T>::reserve(size_t newCapacity)
 {
+	if (!(newCapacity > arrCapacity)) { return; }
+
 	T* temp = new T [newCapacity];
-		if (!(newCapacity > arrCapacity)) { return; }
-		for (size_t i = 0; i < arrSize; i++) {
-			arr[i] = temp[i];
-		}
+
+	for (size_t i = 0; i < arrSize; i++) {
+		temp[i] = arr[i];
+	}
 
 	arrCapacity = newCapacity;
-	delete[] temp;
+	delete[] arr;
+	arr = temp;
 }
 
 template<typename T>
 inline void tVector<T>::push_back(const T & value)
 {
 	if (arrSize >= arrCapacity) {
-		if (arrCapacity == 0)
-			reserve(1);
-	}
+		reserve(1);
+		}
 	else {
 		reserve(arrCapacity * GROWTH_FACTOR);
 	}
-	arr[arrSize++] = value;
+	arr[arrSize] = value;
+	++arrSize;
 
 }
 
@@ -108,5 +111,5 @@ inline size_t tVector<T>::size() const
 template<typename T>
 inline size_t tVector<T>::capacity() const
 {
-	return size_t(arrCapacity);
+	return arrCapacity;
 }
