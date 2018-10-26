@@ -10,26 +10,26 @@ class tVector
 	size_t arrCapacity;                 // stores the capacity of the underlying array
 
 public:
-	tVector();            // initializes the vector's default values
+	tVector();							// initializes the vector's default values
 	~tVector();                         // destroys the underlying array
-
 	T *data();                          // returns a pointer to the underlying array
-
 	void reserve(size_t newCapacity);   // resizes the vector to at least this many elements
-
 	void push_back(const T &value);     // adds an element to the end of the vector
 	void pop_back();                    // drops the last element of the vector
-
 	T &at(size_t index);                // returns the element at the given element
 	tVector(const tVector &vec);
-
-	//tVector& operator=(const tVector &vec);
+	tVector& operator=(const tVector &vec);
+	bool empty();						// Returns true if the vector contains no elements.
+	void resize(size_t);				// Resizes the vector to contain the given number of elements.
+	void shrink_to_fit();				// Resizes the vector's capacity to match its size.
+	void clear();						// Empties the vector (all elements are destroyed in this process)
+	void reserve(size_t);				// Allocates enough space in the underlying array to store the given number of elements.
 	size_t size() const;                // returns current number of elements
 	size_t capacity() const;            // returns maximum number of elements we can store
 };
 
 template<typename T>
-inline tVector<T>::tVector()
+ tVector<T>::tVector()
 {
 	arr = nullptr;
 	arrSize = 0;
@@ -37,19 +37,19 @@ inline tVector<T>::tVector()
 }
 
 template<typename T>
-inline tVector<T>::~tVector()
+ tVector<T>::~tVector()
 {
 
 }
 
 template<typename T>
-inline T * tVector<T>::data()
+ T * tVector<T>::data()
 {
 	return arr;
 }
 
 template<typename T>
-inline void tVector<T>::reserve(size_t newCapacity)
+ void tVector<T>::reserve(size_t newCapacity)
 {
 	if (!(newCapacity > arrCapacity)) { return; }
 
@@ -65,7 +65,7 @@ inline void tVector<T>::reserve(size_t newCapacity)
 }
 
 template<typename T>
-inline void tVector<T>::push_back(const T & value)
+ void tVector<T>::push_back(const T & value)
 {
 	if (arrSize >= arrCapacity) {
 		reserve(1);
@@ -79,37 +79,59 @@ inline void tVector<T>::push_back(const T & value)
 }
 
 template<typename T>
-inline void tVector<T>::pop_back()
+void tVector<T>::pop_back()
 {
 	arrSize--;
 }
 
 template<typename T>
-inline T & tVector<T>::at(size_t index)
+T & tVector<T>::at(size_t index)
 {
 	return(arr[index]);
 
 }
 
 template<typename T>
-inline tVector<T>::tVector(const tVector & vec)
+tVector<T>::tVector(const tVector & vec)
 {
 }
 
-//template<typename T>
-//inline tVector & tVector<T>::operator=(const tVector & vec)
-//{
-//	// TODO: insert return statement here
-//}
+template<typename T>
+tVector<T>::operator=(const tVector & vec)
+{
+	// TODO: insert return statement here
+}
 
 template<typename T>
-inline size_t tVector<T>::size() const
+bool tVector<T>::empty()
+{
+	return false;
+}
+
+template<typename T>
+void tVector<T>::resize(size_t)
+{
+}
+
+template<typename T>
+void tVector<T>::shrink_to_fit()
+{
+}
+
+template<typename T>
+void tVector<T>::clear()
+{
+	arrSize -= arrSize
+}
+
+template<typename T>
+size_t tVector<T>::size() const
 {
 	return arrSize;
 }
 
 template<typename T>
-inline size_t tVector<T>::capacity() const
+size_t tVector<T>::capacity() const
 {
-	return arrCapacity;
+	return size_t(arrCapacity);
 }
