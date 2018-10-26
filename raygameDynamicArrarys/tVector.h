@@ -18,12 +18,11 @@ public:
 	void pop_back();                    // drops the last element of the vector
 	T &at(size_t index);                // returns the element at the given element
 	tVector(const tVector &vec);
-	tVector& operator=(const tVector &vec);
-	bool empty();						// Returns true if the vector contains no elements.
-	void resize(size_t);				// Resizes the vector to contain the given number of elements.
+	T& operator[] (size_t index);
+	void resize(size_t newsize);				// Resizes the vector to contain the given number of elements.
 	void shrink_to_fit();				// Resizes the vector's capacity to match its size.
 	void clear();						// Empties the vector (all elements are destroyed in this process)
-	void reserve(size_t);				// Allocates enough space in the underlying array to store the given number of elements.
+	bool empty();						// Returns true if the vector contains no elements.
 	size_t size() const;                // returns current number of elements
 	size_t capacity() const;            // returns maximum number of elements we can store
 };
@@ -97,31 +96,44 @@ tVector<T>::tVector(const tVector & vec)
 }
 
 template<typename T>
-tVector<T>::operator=(const tVector & vec)
+inline T & tVector<T>::operator[](size_t index)
 {
-	// TODO: insert return statement here
+	return at(index);
 }
 
-template<typename T>
-bool tVector<T>::empty()
-{
-	return false;
-}
 
 template<typename T>
-void tVector<T>::resize(size_t)
+void tVector<T>::resize(size_t newsize)
 {
+	if (!newsize > arrCapacity) {
+		return;
+	}
+	else {
+		arrCapacity = newsize;
+	}
 }
 
 template<typename T>
 void tVector<T>::shrink_to_fit()
 {
+	arrCapacity = arrSize;
 }
 
 template<typename T>
 void tVector<T>::clear()
 {
-	arrSize -= arrSize
+	arrSize -= arrSize;
+}
+
+template<typename T>
+bool tVector<T>::empty()
+{
+	if (arrSize == 0) {
+		return true;
+	}
+	else {
+		return	false;
+	}
 }
 
 template<typename T>

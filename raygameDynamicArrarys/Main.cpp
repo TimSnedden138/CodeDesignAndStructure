@@ -6,8 +6,15 @@
 #include<iostream>
 int main() {
 	tVector<int> ti;
-	ti.push_back(4);
-	ti.push_back(12);
+	std::cout << ti.empty() << std::endl;
 	ti.push_back(8);
+	ti.push_back(7);
+	ti.pop_back();
+	std::cout << ti.empty() << std::endl;
+	ti.push_back(5);
+	ti.push_back(9);
+	ti.push_back(11);
+	ti.push_back(40);
+	std::cout << ti.size() << std::endl;
 	return 0;
 }

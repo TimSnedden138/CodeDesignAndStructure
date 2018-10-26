@@ -16,8 +16,10 @@ public:
 	void pop();                           // drops the top-most element of the Queue
 
 	T& front();                           // returns the front-most element
-	T& back();                            // returns the back-most element
-
+	T& back();
+	const T& front() const;// returns the back-most element
+	const T& back() const;
+	bool empty() const;
 	size_t size() const;
 };
 
@@ -29,32 +31,58 @@ tQueue<T>::tQueue()
 template<typename T>
 tQueue<T>::tQueue(size_t count, const T & value)
 {
+
 }
 
 template<typename T>
 void tQueue<T>::push(const T & value)
 {
+	for (size_t i = 0; i < vec.size() - 1 ++i) {
+		vec[i] = vec[i + 1];
+	}
+	vec.push_back();
 }
 
 template<typename T>
 void tQueue<T>::pop()
 {
+	for (size_t t = 0; t < vec.size() - 1 ++t) {
+		vec[t] = vec[t + 1];
+	}
+	vec.pop_back();
 }
 
 template<typename T>
 T & tQueue<T>::front()
 {
-	// TODO: insert return statement here
+	return vec[0];
 }
 
 template<typename T>
 T & tQueue<T>::back()
 {
-	// TODO: insert return statement here
+	return vec[vec.size - 1];
+}
+
+template<typename T>
+inline const T& tQueue<T>::front() const
+{
+	return vec[0];
+}
+
+template<typename T>
+inline const T & tQueue<T>::back() const
+{
+	return vec[vec.size - 1];
 }
 
 template<typename T>
 size_t tQueue<T>::size() const
 {
-	return size_t();
+	return vec.size();
+}
+template<typename T>
+bool tQueue<T>::empty() const
+{
+	return vec.empty;
 }
