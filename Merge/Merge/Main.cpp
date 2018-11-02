@@ -13,26 +13,48 @@
 #include<iostream>
 void MergeSort(int * arr, size_t p, size_t r);
 void Merge(int * arr, size_t p, size_t q, size_t r);
+int sortarr[8]{3,7,4,2,5,6,8,3 };
+int *arr = sortarr;
 int main() {
-
+	for (int i = 0; i < 8; i++) {
+		std::cout << "Original:" << arr[i] << std::endl;
+	}
+	MergeSort(arr, 0,8-1);
+	for (int i = 0; i < 8; i++) {
+		std::cout << "Stored:" << arr[i] << std::endl;
+	}
+	return 0;
 }
 void Merge(int * arr, size_t p, size_t q, size_t r)
 {
 	size_t leftEnd = q - p + 1;
 	size_t rightEnd = r - q;
-
-	size_t L[]{0,leftEnd};
-	size_t R[]{0,rightEnd};
-
-	for (int i = 0; i == leftEnd; i++) {
+	int * L = new int [leftEnd];
+	int * R = new int[leftEnd];
+	for (int i = 0; i <= leftEnd; i++) {
 		L[i] = arr[p + i];
 	}
-	for (int i = 0; i == rightEnd; i++) {
+	for (int i = 0; i <= rightEnd; i++) {
 		R[i] = arr[q + r + 1];
 	}
 	int i = 0;
 	int j = 0;
-	//for(int k = 0
+	for (int k = p; k <= r; p++) {
+		if (j >= rightEnd || i < leftEnd and L[i] <= R[j]) {
+ 			arr[k] == L[i];
+			i++;
+			
+		}
+		else {
+			arr[k] == R[j];
+			j++;
+			
+		}
+		
+	}
+	delete[] L;
+	delete[] R;
+
 }
 void MergeSort(int * arr, size_t p, size_t r)
 {
