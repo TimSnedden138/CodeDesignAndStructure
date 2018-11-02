@@ -10,6 +10,7 @@ public:
 	int gold;
 	Vector2 pos;
 	Wizard();
+	~Wizard();
 	void draw();
 
 };
