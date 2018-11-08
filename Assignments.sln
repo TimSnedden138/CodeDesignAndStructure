@@ -23,7 +23,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Highscores", "Highscores\Hi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Merge", "Merge\Merge\Merge.vcxproj", "{CC72D528-C9C2-49ED-968B-CB94290C3A8A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Examples", "Examples\Examples.vcxproj", "{3DC20279-F9E4-4F11-88EA-C0595232563F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExampleSingleton", "Examples\Examples.vcxproj", "{3DC20279-F9E4-4F11-88EA-C0595232563F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameState", "GameState\GameState.vcxproj", "{D3849E5F-F048-4704-A0D7-3DC8291168F2}"
 EndProject

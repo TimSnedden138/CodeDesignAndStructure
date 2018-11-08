@@ -1,9 +1,6 @@
 #include<iostream>
 #include <string>
-
-#include "IBox.h"
-#include "IFactory.h"
-#include "Factory.h"
+#include"Libraries.h"
 
 int main() {
 	IBox* p = NULL;
@@ -14,6 +11,6 @@ int main() {
 	delete p;
 	p = f->Create("Blue");
 	std::cout << "\nColor is: " << p->Color() << "\n";
-	delete p;
+	delete f;
 	return 1;
 }

@@ -9,4 +9,8 @@ class Factory : public IFactory
 {
 public:
 	IBox * Create(std::string type);
+	int getState();
+	int setState(int newState);
+	static Factory& GetInstance();
+	int state;
 };
