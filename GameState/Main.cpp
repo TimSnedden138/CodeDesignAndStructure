@@ -1,6 +1,7 @@
 #include"raylib.h"
 #include"GameState.h"
 #include<iostream>
+#include<random>
 using namespace std;
 int main()
 {
@@ -10,6 +11,7 @@ int main()
 	int screenHeight = 450;
 	InitWindow(screenWidth, screenHeight, "Barbarian vs Wizard");
 	SetTargetFPS(60);
+	Texture2D object = LoadTexture("Resources/Players/object.png");
 	Texture2D player1 = LoadTexture("Resources/Players/P1.png");
 	Texture2D player2 = LoadTexture("Resources/Players/P2.png");
 	Texture2D death = LoadTexture("Resources/Players/DEATH.png");
@@ -48,31 +50,31 @@ int main()
 				GameState::GetInstance().setState(3);
 			}
 		}
-		cout << "Scene:" << GameState::GetInstance().getState() + 1 << "\n" << "Corrdinate X:" << GetMousePosition().x << "\n" << "Corrdinate Y:" << GetMousePosition().y <<endl;
 		// Draw
 		//----------------------------------------------------------------------------------
 		BeginDrawing();
-		ClearBackground(WHITE);
+		ClearBackground(BLACK);
 		if (GameState::GetInstance().getState() == 0)
 		{
-			DrawText("START SCENE", 100, 100, 10, RED);
-			DrawTextureEx(player1, { 100,250 }, 0, 1.5, WHITE);
-			DrawTextureEx(player2, { 350,250 }, 0, 1.5, WHITE);
+			DrawText("START SCENE", 150, 183, 50, RED);
+			DrawTextureEx(player1, { 200,250 }, 0, 1.5, RED);
+			DrawTextureEx(player2, { 400,250 }, 0, 1.5, BLUE);
 		}
 		if (GameState::GetInstance().getState() == 1)
 		{
-			DrawText("Player 1 GAME SCENE", 100, 100, 10, RED);
-			DrawTextureEx(player1, { 100,250 }, 0, 1.5, WHITE);
+			
+			DrawText("P1 GAME SCENE", 150, 183, 50, RED);
+			DrawTextureEx(player1, { 200,250 }, 0, 1.5, RED);
 		}
 		if (GameState::GetInstance().getState() == 2)
 		{
-			DrawText("Player 2 GAME SCENE", 100, 100, 10, RED);
-			DrawTextureEx(player2, { 100,250 }, 0, 1.5, WHITE);
+			DrawText("P2 GAME SCENE", 150, 183, 50, RED);
+			DrawTextureEx(player2, { 200,250 }, 0, 1.5, BLUE);
 		}
 		if (GameState::GetInstance().getState() == 3)
 		{
-			DrawText("END SCENE", 100, 100, 10, RED);
-			DrawTextureEx(death, { 100,250 }, 0, 1.5, WHITE);
+			DrawText("END SCENE", 150, 183, 50, RED);
+			DrawTextureEx(death, { 200,250 }, 0, 1.5, GREEN);
 
 		}
 		EndDrawing();

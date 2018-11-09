@@ -1,0 +1,19 @@
+#pragma once
+
+template<typename T>
+class tObjectPool
+{
+	ObjectPool();                       // default initializes the object pool
+	ObjectPool(size_t initialCapacity); // initializes the pool to have a set number of objects
+	~ObjectPool();                      // destroys all objects
+
+	T* free;                            // pointers to objects that can be reused
+	T* used;                            // pointers to objects that are currently in use
+	size_t freeCount;                   // number of objects that are free to use
+	size_t usedCount;                   // number of objects that are in use
+
+	T* retrieve();                      // returns a pointer to an object that will be used (returns null if none available)
+	void recycle(T* obj);               // accepts a pointer that can be used in the future
+
+	size_t capacity();                  // returns the total number of objects that this pool can provide
+};
